@@ -19,8 +19,12 @@ static Contador *_instancia = nil;
 
 +(Contador *) instancia {
     if(_instancia == nil)
-        _instancia = [[Contador alloc] init];
+        _instancia = [super allocWithZone:nil];
     return _instancia;
+}
+
++(id)allocWithZone:(struct _NSZone *)zone {
+    return [self instancia];
 }
 
 -(id)init {
