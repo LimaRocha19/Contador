@@ -9,17 +9,11 @@
 #import "FirstViewController.h"
 #import "Contador.h"
 
-@interface FirstViewController ()
 
-@end
-
-@implementation FirstViewController {
-    Contador *contador;
-}
+@implementation FirstViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    contador = [[Contador alloc] init];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -29,11 +23,13 @@
 }
 
 - (IBAction)clickBoy:(id)sender {
+    Contador *contador = [Contador instancia];
     [contador maisUmCueca];
     NSLog(@"Meninos - %i",[contador getBoys]);
 }
 
 - (IBAction)clickGirl:(id)sender {
+    Contador *contador = [Contador instancia];
     [contador maisUmaGata];
     NSLog(@"Meninas - %i",[contador getGirls]);
 }
