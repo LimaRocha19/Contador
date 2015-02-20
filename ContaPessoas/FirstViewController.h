@@ -8,12 +8,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <AVFoundation/AVFoundation.h>
-
-@interface FirstViewController : UIViewController {
-    AVAudioPlayer *menino;
-    AVAudioPlayer *menina;
-}
+@interface FirstViewController : UIViewController
 
 - (IBAction)clickBoy:(id)sender;
 - (IBAction)clickGirl:(id)sender;
