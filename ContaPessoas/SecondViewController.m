@@ -14,6 +14,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    Contador *contador = [Contador instancia];
+    contador.update = self;
+    [self atualiza];
 }
 
 
@@ -22,7 +25,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)click:(id)sender {
+- (void)atualiza {
     Contador *contador = [Contador instancia];
     _totalBoys.text = [NSString stringWithFormat: @"%d", [contador getBoys]];
     _totalGirls.text = [NSString stringWithFormat: @"%d", [contador getGirls]];

@@ -6,7 +6,11 @@
 //  Copyright (c) 2015 Vinicius Miana. All rights reserved.
 //
 
+#import "Mostrador.h"
+
 @interface Contador : NSObject
+
+@property (nonatomic, assign) id<Mostrador> update;
 
 + (Contador *) instancia;
 

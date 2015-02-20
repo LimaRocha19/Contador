@@ -2,10 +2,9 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--First-->
+        <!--Contador-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="FirstViewController" sceneMemberID="viewController">
@@ -17,88 +16,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hYm-mB-gId">
-                                <rect key="frame" x="0.0" y="167" width="184" height="332"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="GJ8-PI-wpB"/>
-                                    <constraint firstAttribute="width" constant="191" id="V8f-6K-CVY"/>
-                                    <constraint firstAttribute="width" constant="150" id="wRK-D8-fAn"/>
-                                    <constraint firstAttribute="height" constant="300" id="zI8-G5-Sxu"/>
-                                </constraints>
-                                <state key="normal" image="quadrado-azul.jpg">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fXN-IG-L6c">
+                                <rect key="frame" x="28" y="110" width="318" height="231"/>
+                                <color key="backgroundColor" red="0.22332349325301193" green="0.34636155107784694" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="Boy">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="GJ8-PI-wpB"/>
-                                        <exclude reference="wRK-D8-fAn"/>
-                                    </mask>
-                                </variation>
                                 <connections>
-                                    <action selector="clickBoy:" destination="9pv-A4-QxB" eventType="touchDown" id="QWF-hu-z2B"/>
+                                    <action selector="clickBoy:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Xbo-oW-ddp"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jQx-1Z-n65">
-                                <rect key="frame" x="184" y="183" width="191" height="300"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="D13-p5-bzh"/>
-                                    <constraint firstAttribute="height" constant="150" id="Q06-7B-no7"/>
-                                    <constraint firstAttribute="width" secondItem="jQx-1Z-n65" secondAttribute="height" multiplier="111:211" id="neY-Ti-jCZ"/>
-                                    <constraint firstAttribute="height" constant="300" id="oh3-fa-UFd"/>
-                                    <constraint firstAttribute="width" constant="191" id="xkP-eu-3gu"/>
-                                </constraints>
-                                <state key="normal" title="Button" image="Fundo_20vermelho_20OK26.jpg">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FEq-PI-CzR">
+                                <rect key="frame" x="28" y="359" width="318" height="251"/>
+                                <color key="backgroundColor" red="1" green="0.079627607242305554" blue="0.26262711899803071" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Girl">
+                                            <attributes>
+                                                <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <font key="NSFont" size="15" name="HelveticaNeue-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
                                 </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="D13-p5-bzh"/>
-                                        <exclude reference="Q06-7B-no7"/>
-                                        <exclude reference="neY-Ti-jCZ"/>
-                                    </mask>
-                                </variation>
                                 <connections>
-                                    <action selector="clickGirl:" destination="9pv-A4-QxB" eventType="touchDown" id="7bZ-J4-gek"/>
+                                    <action selector="clickGirl:" destination="9pv-A4-QxB" eventType="touchUpInside" id="1Vr-Nn-eAG"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="Contador" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-1w-vlD">
-                                <rect key="frame" x="59" y="0.0" width="256.5" height="159"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="Contador" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-1w-vlD">
+                                <rect key="frame" x="59" y="18" width="256.5" height="74"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="64"/>
-                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="0.44914196130996487" blue="0.18831673080098676" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="centerY" secondItem="hYm-mB-gId" secondAttribute="centerY" constant="113" id="25f-oe-XWF"/>
-                            <constraint firstAttribute="centerX" secondItem="hYm-mB-gId" secondAttribute="centerX" constant="105" id="BIr-Ng-iZd"/>
-                            <constraint firstAttribute="centerX" secondItem="jQx-1Z-n65" secondAttribute="centerX" constant="-53.5" id="HvV-q8-w7n"/>
-                            <constraint firstItem="jQx-1Z-n65" firstAttribute="top" secondItem="KQZ-1w-vlD" secondAttribute="bottom" constant="14" id="QIq-Kq-kBv"/>
-                            <constraint firstItem="jQx-1Z-n65" firstAttribute="width" secondItem="hYm-mB-gId" secondAttribute="width" id="QXq-FV-L3B"/>
-                            <constraint firstItem="jQx-1Z-n65" firstAttribute="top" secondItem="hYm-mB-gId" secondAttribute="top" constant="31" id="Sxc-Z0-BuJ"/>
-                            <constraint firstItem="jQx-1Z-n65" firstAttribute="height" secondItem="hYm-mB-gId" secondAttribute="height" id="eqk-7z-cvb"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="25f-oe-XWF"/>
-                                <exclude reference="BIr-Ng-iZd"/>
-                                <exclude reference="HvV-q8-w7n"/>
-                                <exclude reference="QIq-Kq-kBv"/>
-                                <exclude reference="QXq-FV-L3B"/>
-                                <exclude reference="Sxc-Z0-BuJ"/>
-                                <exclude reference="eqk-7z-cvb"/>
-                            </mask>
-                        </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Contador" image="first" id="acW-dT-cKf"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="749.5" y="-320.5"/>
         </scene>
-        <!--Second-->
+        <!--Números-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="SecondViewController" sceneMemberID="viewController">
@@ -145,15 +108,6 @@
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wdw-cL-Bgf">
-                                <rect key="frame" x="238" y="393" width="54" height="30"/>
-                                <state key="normal" title="Atualiza">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="click:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="Wmf-Ss-Ora"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="LCb-d8-9Wo">
                                 <rect key="frame" x="255" y="220" width="75" height="42"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -164,7 +118,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Números" image="second" id="cPa-gy-q4n"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="total" destination="mhu-4X-L9M" id="876-JP-WJk"/>
@@ -197,9 +151,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Fundo_20vermelho_20OK26.jpg" width="1024" height="1024"/>
         <image name="first" width="30" height="30"/>
-        <image name="quadrado-azul.jpg" width="300" height="300"/>
         <image name="second" width="30" height="30"/>
     </resources>
 </document>

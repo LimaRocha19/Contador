@@ -37,10 +37,12 @@ static Contador *_instancia = nil;
 }
 
 - (void)maisUmCueca {
-    boy = boy + 1;
+    boy++;
+    [_update atualiza];
 }
 - (void)maisUmaGata {
     girl++;
+    [_update atualiza];
 }
 
 -(int)getBoys {
